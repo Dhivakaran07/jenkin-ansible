@@ -20,7 +20,7 @@
 
     - name: Clone the website repository from GitHub
       git:
-        repo: 'https://github.com/Dhivakaran07/jenkin-ansible.git'
+        repo: 'https://github.com/Dhivakaran07/jenkin.git'
         dest: '/var/www/html'
         version: 'main'
         force: yes
@@ -32,3 +32,4 @@
         group: www-data
         mode: '0644'
         recurse: yes
+
