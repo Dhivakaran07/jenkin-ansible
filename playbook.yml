@@ -2,7 +2,7 @@
   hosts: web1
   become: yes
   tasks:
-    - name: Update apt
+    - name: Update apt cache
       apt:
         update_cache: yes
 
@@ -19,7 +19,7 @@
 
     - name: Copy website folder (all files)
       copy:
-        src: site_content/
+        src: "{{ playbook_dir }}/site_content/"
         dest: /var/www/html/
         owner: www-data
         group: www-data
